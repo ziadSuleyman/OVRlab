@@ -19,9 +19,14 @@ def request(base_url, endpoint, data=None):
         return json.load(response)
 
 
+def _comparable(key, value):
+    # Ollama 0.35 may list identical PARAMETER lines in a different order for each model.
+    return sorted(value.splitlines()) if key == "parameters" and value else value
+
+
 def validate_pair_settings(original, edited):
     for key in ["template", "system", "parameters"]:
-        if original.get(key) != edited.get(key):
+        if _comparable(key, original.get(key)) != _comparable(key, edited.get(key)):
             raise ValueError(f"Ollama {key} differs between original and edited models.")
     for key in ["family", "parameter_size", "quantization_level"]:
         if original.get("details", {}).get(key) != edited.get("details", {}).get(key):
