@@ -1,4 +1,4 @@
-# Granite experiment — Ziad Suleyman
+# Granite experiment — Your name
 
 Hugging Face model and revision:
 Code repository and commit:

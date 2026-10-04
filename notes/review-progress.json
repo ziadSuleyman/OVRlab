@@ -1,0 +1,82 @@
+{
+ "test-16|edited": {
+  "correct_and_complete": true,
+  "review_note": "all four stages present; collection is inside step 4, step 2 is transpiration"
+ },
+ "test-19|prompt_only": {
+  "correct_and_complete": false,
+  "review_note": "factual error: says the sun is directly overhead at the poles at the solstices; sunlight-angle effect not explained correctly"
+ },
+ "test-06|original": {
+  "correct_and_complete": true,
+  "review_note": "tracks changes, collaboration and recovery all present; long (7 points) but correct"
+ },
+ "test-02|edited": {
+  "correct_and_complete": true,
+  "review_note": "both points correct, incl. W = mg and newtons; minor: says mass is measured on a scale"
+ },
+ "test-03|edited": {
+  "correct_and_complete": false,
+  "review_note": "wrong mechanism: blames Earth's tilt and the elliptical orbit; says Earth's shadow makes the full moon look larger; never mentions seeing different portions of the sunlit half"
+ },
+ "test-13|edited": {
+  "correct_and_complete": false,
+  "review_note": "friction and energy loss present, but wrongly says gravity helps stop it and that in a vacuum it would roll forever (rolling resistance remains)"
+ },
+ "test-05|edited": {
+  "correct_and_complete": false,
+  "review_note": "gives file type/format, but misses that the extension does not guarantee the contents; muddles extension vs creating software"
+ },
+ "test-17|edited": {
+  "correct_and_complete": false,
+  "review_note": "both points present, but contradicts itself (says persistent storage also loses contents) and calls SRAM non-volatile"
+ },
+ "test-01|prompt_only": {
+  "correct_and_complete": false,
+  "review_note": "wrong mechanism: says towel contains water vapor (it's liquid), calls condensation \"evaporation\", claims air carries away droplets that are \"lighter than air\" yet fall; never states the real point (moving air removes humid air near surface, sustaining evaporation)"
+ },
+ "test-15|original": {
+  "correct_and_complete": false,
+  "review_note": "point 1 present (separates clauses, pauses), but examples don't show ambiguity — the \"alternative interpretations\" are identical/same meaning as the originals; never shows how different grouping changes meaning; opens by attributing it to context"
+ },
+ "test-17|prompt_only": {
+  "correct_and_complete": true,
+  "review_note": "both points present and accurate; clear purpose + power-loss comparison, no errors"
+ },
+ "test-12|prompt_only": {
+  "correct_and_complete": true,
+  "review_note": "both points present; minor simplification (\"gone for good\" — fossil fuels do form, just over millions of years), acceptable"
+ },
+ "test-09|edited": {
+  "correct_and_complete": false,
+  "review_note": "both points present, but outlier example is wrong — set 1,1,1,1,1 has no extreme values and mean 1 IS the typical value; contradicts the claim it illustrates"
+ },
+ "test-03|original": {
+  "correct_and_complete": false,
+  "review_note": "point 1 partially present (position relative to Sun changes → phases), point 2 missing (sunlit half); new/full moon swapped (opposite Sun = full, not new); attributes shape change to Earth's tilt & apparent size; paragraph repeated verbatim"
+ },
+ "test-14|prompt_only": {
+  "correct_and_complete": true,
+  "review_note": "expected point stated verbatim; correct example; concise, no errors"
+ },
+ "test-19|original": {
+  "correct_and_complete": false,
+  "review_note": "all 3 points mentioned, but distance wrongly given as a cause (Earth is closest in Jan, not June) and contradicts itself (closer in summer, then farther in summer); day length explained by distance; Sun never overhead at North Pole; invented term \"tilt-summer-tilt-winter cycle\""
+ },
+ "test-18|edited": {
+  "correct_and_complete": true,
+  "review_note": "three distinct plausible actions, each with a valid savings explanation; leak figure (\"up to 20 gal/day\") is plausible"
+ },
+ "test-01|original": {
+  "correct_and_complete": false,
+  "review_note": "same wrong mechanism as #9: says towel contains water vapor (it's liquid), describes condensation onto towel, air carries away \"droplets\" not vapor; never states moving air replaces humid boundary layer to sustain evaporation"
+ },
+ "test-11|original": {
+  "correct_and_complete": true,
+  "review_note": "both points present (lists sources used; lets others verify); padded/repetitive (plagiarism twice); #7 overclaims — a bibliography can't ensure sources weren't misrepresented"
+ },
+ "test-01|edited": {
+  "correct_and_complete": false,
+  "review_note": "wrong mechanism: describes evaporation as air breaking droplets into smaller droplets/\"vapor bubbles\" and carrying them off (that's atomization, not evaporation); claims evaporative cooling speeds drying (it slows it); invented \"hot spots\"; never states air removes humid boundary layer"
+ }
+}
