@@ -1,11 +1,11 @@
 # Granite experiment — Ziad Suleyman
 
-Hugging Face model and revision:
-Code repository and commit:
-Hardware / OS:
-Active time / unattended time:
-AI assistance used:
-
+Hugging Face model and revision: 2a8f7ca9eff10cf01212e30e4f0bd931f2ea3dab
+GGUF on the Hub: 8bbe34ff4cb808d3dd9008539b3dd2ea1489cd689f8e7cd77619a9b0b3ace020 
+Code repository and commit: https://github.com/ziadSuleyman/OVRlab.git
+Hardware / OS: Ubuntu 24.04, AMD Ryzen 5 5600X, 125 GB RAM; CPU-only inference with Ollama 0.35.1 (the GPU was busy with another job)
+Active time / unattended time: research 156 min active,  5 min upload; setup (rehearsal with a null edit, including three environment fixes) took one afternoon and is reported separately
+AI assistance used: Claude (Anthropic)
 ## Hypothesis
 
 **Main (H0, weak effect).** The edit removes the style direction from a single attention output
