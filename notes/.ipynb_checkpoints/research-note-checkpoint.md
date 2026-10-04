@@ -1,4 +1,4 @@
-# Granite experiment — Your name
+# Granite experiment — Ziad Suleyman
 
 Hugging Face model and revision:
 Code repository and commit:
@@ -55,13 +55,32 @@ Content shifted rather than shrank: dev-02 gained the correct "we hear thunder a
 
 | Evaluation | Original | Edited | Difference |
 | --- | --- | --- | --- |
-| GSM8K, 50-question subset | correct / 50 | correct / 50 | percentage points |
-| ARC-Challenge, 50-question subset | correct / 50 | correct / 50 | percentage points |
-| Behavior: correctness and completeness | reviewed count / 20 | reviewed count / 20 | |
-| Behavior: response length | | | |
+| GSM8K, 50-question subset | 22/50 | 19/50 | −6.0 pp (1 gain, 4 regressions) |
+| ARC-Challenge, 50-question subset | 11/50 | 11/50 | 0 pp (no flips) |
+| Behavior: correct and complete | 2/6 reviewed | 3/9 reviewed | review incomplete: 20/60 answers marked (prompt-only 3/5) |
+| Behavior: response length (20 questions) | 185.7 words | 196.1 words | +10.1% mean per-question change; 8 shorter, 1 same, 11 longer |
 
-How did the prompt-only control compare? What happened on questions requesting detail? Include representative outputs and at least one failure, regression, or unchanged case. Link full outputs.
+On the 15 ordinary questions the edit changed length by +5.2% (7 shorter, 7 longer of 14 changed);
+the prompt-only control changed it by −27.2% (12 of 14 shorter). On the 5 detail requests the edit
+lengthened answers by +24.9% (4 of 5 longer), while prompt-only shortened them by 14.0%. No answer
+hit the 512-token limit. Examples: test-20 (detail) grew from 199 to 358 words, test-15 shrank from
+234 to 90, and test-14 stayed at 44 words. Edited GSM8K outputs used slightly more tokens
+(8,884 vs 8,609). Full outputs: `results/behavior.json`, `results/behavior.annotated.json`,
+`results/capability/logs/`.
 
 ## Interpretation
 
-What does the evidence support? What remains uncertain? Which confound matters most? What single experiment would you run next?
+H0 holds on its length criteria (ordinary questions +5.2%, changes split 7/7), and H1 is rejected:
+detail answers lengthened by 25% instead of shortening twice as much. My layer-level prediction
+failed: layer 23 had the largest positive default write, yet removing it lengthened answers on
+average, so the sign of `attn_write_default` did not predict the behaviour. H0's capability
+prediction also failed: GSM8K fell by 3 questions (4 regressions, 1 gain). That fits my caveat that
+editing the last block leaves nothing downstream to repair damage, but 3 of 50 is within about one
+standard error (0.07), so it is a signal to check, not established harm. Both models score 22% on
+ARC, below the 25% chance level, which suggests an answer-extraction problem; I did not verify this
+in the logs. The prompt-only control shortened answers far more than the edit, so in this setup a
+prompt beats this single-matrix edit. The confound that matters most is that the direction was
+measured at the last prompt token under explicit instructions, while the edit acts on every
+generated token in the final block. The review is incomplete and n = 20, so a systematic
+lengthening is not established. Next experiment: the same edit at layer 7, with a random-direction
+edit of equal strength as a control, to separate a direction-specific effect from generic perturbation.
