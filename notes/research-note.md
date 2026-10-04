@@ -1,6 +1,6 @@
 # Granite experiment — Ziad Suleyman
 
-Hugging Face model and revision:
+Hugging Face model and revision: 2a8f7ca9eff10cf01212e30e4f0bd931f2ea3dab
 Code repository and commit:
 Hardware / OS:
 Active time / unattended time:
